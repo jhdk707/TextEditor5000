@@ -18,25 +18,25 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // WEBPACK PLUGIN - GENERATE HTML & INJECT BUNDLES 
+      // WEBPACK PLUGIN - GENERATE HTML AND INJECT BUNDLES 
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'Contact Cards'
       }),
      
-      // INJECT SERVICE WORKER
+      // INJECT SERVICE WORKER 
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
 
-      // CREATE MANIFEST.JSON FILE
+      // CREATE MANIFEST.JSON FILE 
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'text aint cheap text editor',
+        short_name: 'Text Editor',
+        description: 'A simple text editor for your browser.',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
@@ -73,3 +73,4 @@ module.exports = () => {
       ],
     },
   };
+};
