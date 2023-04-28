@@ -34,9 +34,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'text aint cheap text editor',
+        name: 'Text Editor 5000',
         short_name: 'Text Editor',
-        description: 'A simple text editor for your browser.',
+        description: 'A PWA offline capable text editor for saving code snippets.',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
